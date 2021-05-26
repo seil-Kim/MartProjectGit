@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>result</title>
+	<script src = 'https://code.jquery.com/jquery-3.3.1.js'></script>
+	<script src = './jquery.cookie.js'></script>
+	
+	<script>
+		$(document).ready(function(){
+			var name = $.cookie('name')+'님';
+			$('#cook').text(name);
+		});
+	</script>
+	
+	<style>
+		h1{margin : 20px; padding : 20px;}
+	</style>
+</head>
+<body>
+<h1 id = 'cook'></h1>
+<h1>
+축하합니다.<br>회원가입 되셨습니다.</h1>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cart</title>
+ <style>
+   	 body,html{width:100%, height:100%}  
+
+	 table{
+		position:absolute; left:50%; top:50%;
+		transform:translate(-50%, -50%);
+	 }
+	 td:nth-child(odd) {
+		background:#EAEAEA;
+	 }
+	 td:nth-child(even) {
+		background:rgba(32,52,58,.2);
+	 }
+	 #last{
+	    background:white;
+	}
+</style>
+</head>
+<body>
+	<P ALIGN="center"> 
+    <FONT SIZE="5">장바구니</FONT> 
+  </P> 
+	<table CELLPADDING="30">
+		<thead>
+			<tr>
+				<th>상품명</th>
+				<th>가격</th>
+				<th>수량</th>
+			</tr>
+			<tr>
+				<td colspan = "6" align = "center" id = "last"> <input type = "submit" value = "상품 결제">&nbsp;&nbsp;
+				<input type = "reset" value = "장바구니 제거"></td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

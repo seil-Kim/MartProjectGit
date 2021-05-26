@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title> inputForm </title>
+  <script src='https://code.jquery.com/jquery-3.1.1.js'></script>    
+  <script src='./jquery.cookie.js'></script>
+  <!-- <script>
+  	$(document).ready(function(){
+  		$('#fm').submit(function(){
+  			var str1 = $('#no').val();
+  			var str2 = Number($('#cnt'.val()));
+  			if(str1.length < 1){
+  				alert('상품번호 입력하세요');
+  				fm1.pno.focus();
+  				return false;
+  			}else if(str2 <= 0){
+  				alert('상품갯수를 입력하세요');
+  				fm1.pcnt.focus();
+  				return false;
+  			}
+  			return true;
+  		});
+  	});n
+  </script> -->
+  <style>
+   	 body,html{width:100%, height:100%}  
+
+	 table{
+		position:absolute; left:50%; top:50%;
+		transform:translate(-50%, -50%);
+	 }
+	 td:nth-child(odd) {
+		background:#EAEAEA;
+	 }
+	 td:nth-child(even) {
+		background:rgba(32,52,58,.2);
+	 }
+	 #last{
+	    background:white;
+	}
+ </style>
+ <script>
+	  function oncheck(){
+		if(!fm.name.value){
+		  alert('이름을 입력하세요');
+		  fm.name.focus();
+		  return false;
+		  }
+		if(!fm.id.value){
+			  alert('아이디를 입력하세요');
+			  fm.id.focus();
+			  return false;
+			  }
+		if(!fm.password.value){
+		  alert('암호를 입력하세요');
+		  fm.password.focus();
+		  return false;
+		}
+		if(!fm.tel2.value || !fm.tel3.value){
+		  alert('전화번호를 입력하세요');
+		  fm.tel2.focus();
+		  return false;
+		}
+ 		if(!(fm.gender[0].checked||fm.gender[1].checked)){
+ 		  alert('성별을 선택하세요');
+ 		  return false;
+ 		}
+		var val=fm.name.value;
+		$.cookie('name', val, {expires: 2});
+		return true;
+	  }
+ </script>
+ </head>
+
+ <BODY> 
+  <P ALIGN="center"><br><br><br><br><br><br>
+    <FONT SIZE="6">seil mart 회원 정보 입력</FONT> 
+  </P> 
+  <FORM ACTION="result.html" name="fm" onsubmit="return oncheck()">   
+	<TABLE CELLPADDING="8">      
+	  <TR>   
+	   <TD> 이름 </TD>   
+	   <TD> <INPUT TYPE="text" NAME="name" SIZE="10"></TD> 
+	   </TR>
+	   <TR>   
+	   <TD> 아이디 </TD>   
+	   <TD> <INPUT TYPE="text" NAME="id" SIZE="10"></TD> 
+	   </TR>
+	  <TR>   
+	   <TD> 암호 </TD>   
+	   <TD> <INPUT TYPE="password" NAME="password" SIZE="10"></TD> 
+	  </TR> 
+	  <TR>   
+	   <TD> 전화번호 </TD>   
+	   <TD> <SELECT NAME="tel1">     
+			   <OPTION SELECTED> 010</OPTION>     
+			   <OPTION> 02</OPTION>     
+			   <OPTION> 053</OPTION>     
+			   <OPTION> 011</OPTION>     
+		    </SELECT>
+		   - <INPUT NAME="tel2" SIZE="4" maxlength=4>
+		   - <INPUT NAME="tel3" SIZE="4" maxlength=4> </TD> 
+	  </TR>
+ 
+	  <TR>   
+	   <TD> 성별 </TD>   
+	   <TD> <INPUT TYPE="radio" NAME="gender" VALUE="male">남자&nbsp;&nbsp;       
+	        <INPUT TYPE="radio" NAME="gender" VALUE="female">여자 </TD> 
+	  </TR>
+	  <TR>   
+	   <TD COLSPAN="2" ALIGN="center" id="last"> <INPUT TYPE="submit" VALUE="등록하기">&nbsp;&nbsp;     
+	      <INPUT TYPE="reset" VALUE="취소하기"> </TD> 
+	  </TR> 
+	</TABLE> 
+  </FORM>
+  
+ </BODY> 
+</html>
