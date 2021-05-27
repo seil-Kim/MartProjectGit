@@ -8,6 +8,8 @@ public class TR_GDS {
 	private int Gds_cnt;
 	private String Reg_dt;
 	
+	public TR_GDS() {}
+	
 	public int getGds_cnt() {
 		return Gds_cnt;
 	}
@@ -35,7 +37,7 @@ public class TR_GDS {
 	public String getReg_dt() {
 		return Reg_dt;
 	}
-	public void setRdg_dt(String reg_dt) {
+	public void setReg_dt(String reg_dt) {
 		Reg_dt = reg_dt;
 	}
 	

@@ -31,10 +31,7 @@
 		cartDAO cdao = new cartDAO();
 		List<incart> cart = cdao.readAllDB();
 	%>
-	<P ALIGN="center"> 
-    <FONT SIZE="5">장바구니</FONT> 
-  </P> 
-	<table CELLPADDING="30">
+	<table CELLPADDING="30" width = "350">
 		<thead>
 			<tr>
 				<th>상품명</th>
@@ -51,7 +48,7 @@
 		%>
 			<tr>
 				<td colspan = "6" align = "center" id = "last"> <input type = "submit" value = "상품 결제">&nbsp;&nbsp;
-				<input type = "delete" value = "장바구니 제거"></td>
+				<input type = "reset" value = "장바구니 제거"></td>
 			</tr>
 		</thead>
 	</table>

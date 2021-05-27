@@ -14,8 +14,8 @@
 	<!--<jsp:setProperty property="*" name="buyer"/>-->
 	<%
 		incart.setGds_nm(request.getParameter("Gds_nm"));
-		incart.setSale_amt(request.getParameter("Sale_amt"));
-		incart.setGds_buycnt(request.getParameter("Gds_buycnt"));	
+		incart.setSale_amt(Integer.parseInt("Sale_amt"));
+		String Gds_buycnt = request.getParameter("Gds_buycnt");	
 		
 		cartDAO cdao = new cartDAO();
 		cdao.insertDB(incart);

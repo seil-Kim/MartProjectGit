@@ -95,7 +95,7 @@ public class MartAdm {
 	    	  System.out.print("입고 수량을 입력하세요: ");
 	    	  int Gds_cnt = inputInt();
 	    	  System.out.print("등록 일자를 입력하세요: ");
-	    	  String Rdg_dt = inputStr();
+	    	  String Reg_dt = inputStr();
 	    	  
 	    	  ma = new TR_GDS();
 	    	  
@@ -103,7 +103,7 @@ public class MartAdm {
 	    	  ma.setGds_nm(Gds_nm);
 	    	  ma.setSale_amt(Sale_amt);
 	    	  ma.setGds_cnt(Gds_cnt);
-	    	  ma.setRdg_dt(Rdg_dt);
+	    	  ma.setReg_dt(Reg_dt);
 	    	  insertMA(ma);    	  
 	    	  
 	      }
@@ -126,7 +126,7 @@ public class MartAdm {
 	       ma.setGds_nm(rs.getString(2));
 	       ma.setSale_amt(rs.getInt(3));
 	       ma.setGds_cnt(rs.getInt(4));
-	       ma.setRdg_dt(rs.getString(5));
+	       ma.setReg_dt(rs.getString(5));
 	    }
 	    DBCon.close(con, stmt, rs);
 	    
@@ -228,7 +228,7 @@ public class MartAdm {
 		    ma.setGds_nm(rs.getString(2));
 		    ma.setSale_amt(rs.getInt(3));
 		    ma.setGds_cnt(rs.getInt(4));
-		    ma.setRdg_dt(rs.getString(5));
+		    ma.setReg_dt(rs.getString(5));
 		    martInfo(ma);
 		}
 		

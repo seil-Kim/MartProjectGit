@@ -49,7 +49,7 @@
 				<%out.print("<td>" + gds.getGds_nm() + "</td>");
 				out.print("<td>" + gds.getSale_amt() + "</td>");
 				out.print("<td>" + gds.getGds_cnt() + "</td>");%>
-				<td><SELECT NAME="cnt">     
+				<td><SELECT NAME="Gds_buycnt">     
             		<OPTION SELECTED> 1</OPTION>     
             		<OPTION> 2</OPTION>     
             		<OPTION> 3</OPTION>     

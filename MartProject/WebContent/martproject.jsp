@@ -67,6 +67,10 @@
 			if(session.getAttribute("Mshp_id")==null){
 				out.println("<a href = 'idx_Jsp.jsp?idx=loginForm'>로그인</a>");
 				out.print("<a href = 'idx_Jsp.jsp?idx=custcheck'>회원가입</a>");
+			}else if(session.getAttribute("Mshp_id").equals("seil")){
+				out.println("<a href = 'idx_Jsp.jsp?idx=ingds'>상품 입고</a>");
+				out.println("<a href = 'idx_Jsp.jsp?idx=gdslistview'>상품 수정</a>");
+				out.print("<li><a href = 'logout.jsp'>로그아웃</a></li>");
 			}else{
 				out.print("<li><a href = 'logout.jsp'>로그아웃</a></li>");
 			}%>
